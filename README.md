@@ -41,14 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 user.updated
 user.created
 4. copy the signing secret, this is your webhook secret to env file
-5. Go to https://dashboard.stripe.com/login and sign in, click on the sidebar to create new account. Copy the publishable key and secret key and put in env file
-6. Go to https://dashboard.stripe.com/webhooks and add enpoint for
-https://{url}/api/webhooks/stripe add invoice.payment_succeeded
-checkout.session.completed
-on the top right-hand side copy the webhooksecret with we_
-7. Go to https://console.neon.tech/app/projects dashboard, create a database and copy this connection string this is your DIRECT_URL
-8. Go to https://console.prisma.io/ and add new project, copy your direct url string from step 7 and past in the Database connection string, copy the new accelerate link, this is your DATABASE_URL in the env file
-9. Go to https://uploadthing.com/ and sign in with github, create a new app, go to the api keys page and copy the api keys.
-10. Go to sentry.io and make sure you are signed in, type in npx @sentry/wizard@latest -i sourcemaps
-it should rewrite your sentry files.
-If you have problems running this, whatsapp +65 92962690 or whoever is currently maintaining this repo
+
+5. Go to https://console.neon.tech/app/projects dashboard, create a database and copy this connection string this is your DIRECT_URL
+
+6. Go to https://uploadthing.com/ and sign in with github, create a new app, go to the api keys page and copy the api keys.
