@@ -5,9 +5,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-pnpm install
-pnpm build
-pnpm dev
+npm run build
+npm run dev
 
 ```
 
@@ -32,16 +31,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnyp-tech%2Fnyp-tech%2Ftree%2Fmain%2Fbihance&demo-title=FULL&demo-description=Deploy-Sample-SAAS)
-
-### This assumes you have a vercel account
-1. Go To https://clerk.com/ and sign in, go to the api keys page, copy the env.local to your .env file
-2. Go To Webhooks page, add endpoint
-3. Add {url}/api/clerk-webhook where your {url} is the hosted url, add
-user.updated
-user.created
-4. copy the signing secret, this is your webhook secret to env file
-
-5. Go to https://console.neon.tech/app/projects dashboard, create a database and copy this connection string this is your DIRECT_URL
-
-6. Go to https://uploadthing.com/ and sign in with github, create a new app, go to the api keys page and copy the api keys.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnyp-tech%2Fnyp-tech%2Ftree%2Fmain%2Fnpx-example&demo-title=SampleNYPTECH&demo-description=Deploy-Sample-App-NYPTECH)

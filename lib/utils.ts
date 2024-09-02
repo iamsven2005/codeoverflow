@@ -5,5 +5,5 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 export function absoluteUrl(path: string){
-  return `${process.env.FRONTEND_URL}${path}`
+  return `${process.env.APP_URL}${path}`
 }
