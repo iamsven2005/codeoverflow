@@ -81,7 +81,7 @@ value={self?.theme ?? "cupcake"}
                 <li><Link href="/quests" className="btn btn-accent"><Sword/>Quests</Link></li>
                 <li><Link href="/shop" className="btn btn-accent"><ShoppingCart />Shop</Link></li> 
                 <li><Link href="/theme" className="btn btn-accent"><Settings2 />Theme</Link></li> 
-                {/* Putting the btn in list makes it look like double button (li) is needed for sidebar */}
+
               </ul>
             </div>
           </div>

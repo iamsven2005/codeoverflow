@@ -8,7 +8,7 @@ import { db } from "./db";
 export const getUserProgress = cache(async () => {
     const { userId } = await auth();
     if (!userId) {
-        return notFound();
+        return null;
     }
     const data = await db.user_progress.findFirst({
         where: { user_id: userId },
