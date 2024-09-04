@@ -33,12 +33,13 @@ model cCourses {
 model categories {
   id       String     @id @default(cuid())
   name     String     @unique(map: "categories_name_unique")
+
   cCourses cCourses[]
 }
 
 model challenge_options {
-  id           Int        @id @default(autoincrement())
-  challenge_id Int
+  id           String        @id @default(cuid())
+  challenge_id String
   text         String
   correct      Boolean
   image_src    String?
@@ -47,16 +48,16 @@ model challenge_options {
 }
 
 model challenge_progress {
-  id           Int        @id @default(autoincrement())
+  id           String        @id @default(cuid())
   user_id      String
-  challenge_id Int
+  challenge_id String
   completed    Boolean    @default(false)
   challenges   challenges @relation(fields: [challenge_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "challenge_progress_challenge_id_challenges_id_fk")
 }
 
 model challenges {
-  id                 Int                  @id @default(autoincrement())
-  lesson_id          Int
+  id                 String                  @id @default(cuid())
+  lesson_id          String
   type               type
   question           String
   order              Int
@@ -79,8 +80,10 @@ model chapters {
 }
 
 model courses {
-  id            Int             @id @default(autoincrement())
+  id            String             @id @default(cuid())
   title         String
+  description   String
+  position      Int
   image_src     String
   units         units[]
   user_progress user_progress[]
@@ -95,19 +98,19 @@ model cuser_progress {
 }
 
 model lessons {
-  id         Int          @id @default(autoincrement())
+  id         String          @id @default(cuid())
   title      String
-  unit_id    Int
+  unit_id    String
   order      Int
   challenges challenges[]
   units      units        @relation(fields: [unit_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "lessons_unit_id_units_id_fk")
 }
 
 model units {
-  id          Int       @id @default(autoincrement())
+  id          String       @id @default(cuid())
   title       String
   description String
-  course_id   Int
+  course_id   String
   order       Int
   lessons     lessons[]
   courses     courses   @relation(fields: [course_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "units_course_id_courses_id_fk")
@@ -117,7 +120,7 @@ model user_progress {
   user_id          String   @id
   user_name        String   @default("User")
   user_image_src   String   @default("/mascot.svg")
-  active_course_id Int?
+  active_course_id String?
   hearts           Int      @default(5)
   points           Int      @default(0)
   maxhearts        Int      @default(5)

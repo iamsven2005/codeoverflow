@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 const allowed = [
-    "user_2gG1vWNpCWeqcgCUAQgrwtEnoNH"
+    "user_2lamawXLnIO5iXJR04OtTPcALVp"
 ]
 export const isAdmin = () => {
     const {userId} = auth();

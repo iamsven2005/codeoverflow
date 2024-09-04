@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export const GET = async (
   req: Request,
-  { params }: { params: { unitId: number } }
+  { params }: { params: { unitId: string } }
 ) => {
   if (!isAdmin()) {
     return new NextResponse("Unauthorized", { status: 403 });
@@ -19,7 +19,7 @@ export const GET = async (
 
 export const PUT = async (
   req: Request,
-  { params }: { params: { unitId: number } }
+  { params }: { params: { unitId: string } }
 ) => {
   if (!isAdmin()) {
     return new NextResponse("Unauthorized", { status: 403 });
@@ -38,7 +38,7 @@ export const PUT = async (
 
 export const DELETE = async (
   req: Request,
-  { params }: { params: { unitId: number } }
+  { params }: { params: { unitId: string } }
 ) => {
   if (!isAdmin()) {
     return new NextResponse("Unauthorized", { status: 403 });
